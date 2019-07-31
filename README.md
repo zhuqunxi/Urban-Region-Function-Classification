@@ -61,5 +61,5 @@
 	- [LightGBM跑概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model)
 
 ### Contacts
-- qxzhu16@fudan.edu.cn
+- qxzhu16@fudan.edu.cn, QZHU6@mgh.harvard.edu
 - jzhou@ica.stc.sh.cn
