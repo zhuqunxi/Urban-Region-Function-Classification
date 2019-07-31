@@ -44,6 +44,8 @@
    
 ### 代码使用说明
 - [Feature_process](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_process) 特征抽取
+	- 1）[data_precessing_user_id_number_hour.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_hour.py) 用户id的时间特征抽取
+    - 2）[data_precessing_user_id_number_holiday.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_holiday.py) 用户id的节假日特征抽取
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 神经网络模型
 - [ML](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 模型
 - [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
@@ -51,4 +53,3 @@
 ### Contacts
 - qxzhu16@fudan.edu.cn
 - jzhou@ica.stc.sh.cn
-
