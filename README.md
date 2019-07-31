@@ -31,6 +31,7 @@
 - 初赛和复赛数据合并，从40w增加到44w样本
 
 ### Contacts
+- qxzhu16@fudan.edu.cn
 - jzhou@ica.stc.sh.cn
 
 
