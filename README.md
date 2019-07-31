@@ -16,6 +16,8 @@
 - Pytorch 0.4.0
 - sklearn
 - numpy
+- XGboost
+- Lightgbm
 
 ### 思路
 #### 特征
