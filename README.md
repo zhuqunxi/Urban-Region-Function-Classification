@@ -30,7 +30,7 @@
 - 用户id特征挖掘
 
   - 1）统计一个用户出现在不同的地方次数，这里以一天表示1次，然后特征中对8个统计量进行统计（注意：样本统计中需要将去当前样本的信息，从而防止透露label信息而过拟合）（主要特征，直接到线上86+）
-  - 2）统计一个用户全局的Global特征，及一个用户在不同地方次数的统计信息
+  - 2）统计一个用户全局的Global特征，及一个用户在不同地方次数的统计信息（ps：online的提高也有将近1个百分点）
   - 3）用户有规律出入到特征统计，如统计用户节假日情况，将一天分成四个时间段统计用户在这些时间段特征。
 
 - 初赛和复赛数据合并，从40w增加到44w样本（复赛大概提高1个点）
@@ -40,15 +40,15 @@
    - 1）图像特征抽取使Densenet121，获得样本概率，用于stacking（线下0.566375）
    - 2）7*26*24特征用dpn26网络进行训练，得到样本概率，用于stacking（线下0.643914）
 - 机器学习模型
-   - 1）Lightgbm模型和Xgboost模型，除了学习率和迭代次数，其他使用默认参数，结合前面抽取特征 （线下0.905048）
+   - 1）Lightgbm模型和Xgboost模型，除了学习率和迭代次数，其他使用默认参数，结合前面抽取特征 （线下0.907）
 - stacking
-   - 使用Lightgbm进行Stacking （线上90.20）
+   - 使用Lightgbm进行Stacking （线下0.910786，线上0.90203）
    
 ### 代码使用说明
 - [preprocessing](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/data_processing) 数据预处理
 	- 1）train.txt, test.txt, train.csv, test.csv生成
 	- 2）样本npy文件生成，用于深度学习模型
-- [Feature_process](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
+- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
 	- 1）[data_precessing_user_id_number_hour.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_hour.py) 用户id的时间特征抽取
 	- 2）[data_precessing_user_id_number_holiday.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_holiday.py) 用户id的节假日特征抽取
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/CNN) 神经网络模型
