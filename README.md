@@ -48,14 +48,17 @@
 - [preprocessing](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/data_processing) 数据预处理
 	- 1）train.txt, test.txt, train.csv, test.csv生成
 	- 2）样本npy文件生成，用于深度学习模型
-- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 基础特征抽取
+- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
 	- 1）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/Basic_feature) 基础特征
-	- 2）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
-	- 3）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_global) 用户id的global特征抽取
+	- 2）[UserID_featurelocal](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
+	- 3）[UserID_feature_global](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_global) 用户id的global特征抽取
 	
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/CNN) 神经网络模型
+	- [Image和Visit概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/CNN)
 - [ML](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 模型
+	- [LightGBM概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/ML)
 - [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
+	- [LightGBM跑概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model)
 
 ### Contacts
 - qxzhu16@fudan.edu.cn
