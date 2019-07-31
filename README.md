@@ -50,7 +50,7 @@
 	- 2）样本npy文件生成，用于深度学习模型
 - [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
 	- 1）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/Basic_feature) 基础特征
-	- 2）[UserID_featurelocal](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
+	- 2）[UserID_feature_local](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
 	- 3）[UserID_feature_global](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_global) 用户id的global特征抽取
 	
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/CNN) 神经网络模型
