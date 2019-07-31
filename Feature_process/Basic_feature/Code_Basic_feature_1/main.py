@@ -176,6 +176,10 @@ if __name__ == '__main__':
     if not os.path.exists("./feature/"):
         os.makedirs("./feature/")
 
+    """
+    step 1: Is_Run = True, 跑分布式的特征
+    step 2: Is_Run = False, 合并分布式的特征
+    """
     Is_Run = True
     if Is_Run:
         run()
