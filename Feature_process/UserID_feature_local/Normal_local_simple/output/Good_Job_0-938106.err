@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "normal_local.py", line 3, in <module>
+    from function import main
+  File "/PHShome/qz062/UPO/Baidu_competition/Fusai/code/Code_UserID_feature/Normal_local_simple/function.py", line 3, in <module>
+    import pandas as pd
+ImportError: No module named pandas

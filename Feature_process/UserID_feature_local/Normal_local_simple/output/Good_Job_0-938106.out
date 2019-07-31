@@ -1,0 +1,59 @@
+Sender: LSF System <lsfadmin@cmu067>
+Subject: Job 938106: <Good_Job_all> Exited
+
+Job <Good_Job_all> was submitted from host <eris1n2> by user <qz062> in cluster <cmucluster>.
+Job was executed on host(s) <4*cmu067>, in queue <medium>, as user <qz062> in cluster <cmucluster>.
+</PHShome/qz062> was used as the home directory.
+</PHShome/qz062/UPO/Baidu_competition/Fusai/code/Code_UserID_feature/Normal_local_simple> was used as the working directory.
+Started at Fri Jun 28 17:52:05 2019
+Results reported at Fri Jun 28 17:52:06 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Good_Job_all
+#BSUB -o output/Good_Job_0-%J.out
+#BSUB -e output/Good_Job_0-%J.err
+#BSUB -n 4
+
+
+# This is a sample script to test submission to LSF and the job environment
+# Choose a queue that you have access (eg the normal queue) and submit
+# job as follows:
+# ---
+# cd ~/lsf
+# bsub -q normal < Good_Job_0.lsf
+# bjobs a
+# ## # # B S U B -R "rusage[mem=16384]" Good_Job
+# ---
+# Then look in the ~/lsf/output folder for the script log
+# that matches the job ID number
+
+# module load anaconda/3-5.0.1
+# Please make a copy of this script for your own modifications
+
+# python /PHShome/qz062/tree/UPO/Baidu_competition/code/visit/feature_extract/code_20190607_1/Compute_distributed/main_part_00.py
+python normal_local.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :      0.10 sec.
+    Max Memory :         6 MB
+    Max Swap   :        33 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <output/Good_Job_0-938106.err> for stderr output of this job.
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+#BSUB -J Good_Job_all
+#BSUB -o output/Good_Job_0-%J.out
+#BSUB -e output/Good_Job_0-%J.err
+#BSUB -n 4
+
+
+# This is a sample script to test submission to LSF and the job environment
+# Choose a queue that you have access (eg the normal queue) and submit
+# job as follows:
+# ---
+# cd ~/lsf
+# bsub -q normal < Good_Job_0.lsf
+# bjobs a
+# ## # # B S U B -R "rusage[mem=16384]" Good_Job
+# ---
+# Then look in the ~/lsf/output folder for the script log
+# that matches the job ID number
+
+# module load anaconda/3-5.0.1
+# Please make a copy of this script for your own modifications
+
+# python /PHShome/qz062/tree/UPO/Baidu_competition/code/visit/feature_extract/code_20190607_1/Compute_distributed/main_part_00.py
+python normal_hour_local.py
