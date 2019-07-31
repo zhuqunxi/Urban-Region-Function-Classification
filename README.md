@@ -48,9 +48,11 @@
 - [preprocessing](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/data_processing) 数据预处理
 	- 1）train.txt, test.txt, train.csv, test.csv生成
 	- 2）样本npy文件生成，用于深度学习模型
-- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
-	- 1）[data_precessing_user_id_number_hour.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_hour.py) 用户id的时间特征抽取
-	- 2）[data_precessing_user_id_number_holiday.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_holiday.py) 用户id的节假日特征抽取
+- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 基础特征抽取
+	- 1）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/Basic_feature) 基础特征
+	- 2）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
+	- 3）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_global) 用户id的global特征抽取
+	
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/CNN) 神经网络模型
 - [ML](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 模型
 - [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
