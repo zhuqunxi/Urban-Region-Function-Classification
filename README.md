@@ -6,7 +6,7 @@
 
 成员：
 - 朱群喜，复旦大学数学系博士，目前在哈佛医学院交流；
-- 周杰，华东师范大学计算机系博士，曾获得[KDD CUP 2017](https://github.com/12190143/Black-Swan)和[KDD CUP 2018](https://github.com/12190143/KDD_CUP_2018) Top3.
+- 周杰，华东师范大学计算机系博士，目前在加拿大约克大学交流，曾获得[KDD CUP 2017](https://github.com/12190143/Black-Swan)和[KDD CUP 2018](https://github.com/12190143/KDD_CUP_2018) Top3.
 
 名次：初赛第一，复赛？
 
