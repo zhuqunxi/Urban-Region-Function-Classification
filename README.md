@@ -4,7 +4,9 @@
 
 队名：海疯习习
 
-成员：朱群喜，复旦大学数学系博士，目前在哈佛医学院交流；周杰，华东师范大学计算机系博士，曾获得[KDD CUP 2017](https://github.com/12190143/Black-Swan)和[KDD CUP 2018](https://github.com/12190143/KDD_CUP_2018) Top3.
+成员：
+- 朱群喜，复旦大学数学系博士，目前在哈佛医学院交流；
+- 周杰，华东师范大学计算机系博士，曾获得[KDD CUP 2017](https://github.com/12190143/Black-Swan)和[KDD CUP 2018](https://github.com/12190143/KDD_CUP_2018) Top3.
 
 名次：初赛第一，复赛？
 
@@ -40,10 +42,15 @@
 - 机器学习模型
    - 1）Lightgbm模型和Xgboost模型，除了学习率和迭代次数，其他使用默认参数，结合前面抽取特征 （线下0.905048）
 - stacking
-   - 使用Lightgbm进行Stacking （线上90.02）
+   - 使用Lightgbm进行Stacking （线上90.20）
    
 ### 代码使用说明
+- [preprocessing](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_process) 特征抽取
+    - 1) train.txt, test.txt, train.csv, test.csv生成
+    - 2）样本npy文件生成，用于深度学习模型
 - [Feature_process](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_process) 特征抽取
+	- 1）[data_precessing_user_id_number_hour.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_hour.py) 用户id的时间特征抽取
+    - 2）[data_precessing_user_id_number_holiday.py](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/blob/master/Feature_process/UserID_feature_local/Normal_local_simple/data_precessing_user_id_number_holiday.py) 用户id的节假日特征抽取
 - [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 神经网络模型
 - [ML](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 模型
 - [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
@@ -51,4 +58,3 @@
 ### Contacts
 - qxzhu16@fudan.edu.cn
 - jzhou@ica.stc.sh.cn
-
