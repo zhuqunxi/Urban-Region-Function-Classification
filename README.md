@@ -64,7 +64,7 @@
 ### 感想
 朱群喜：第一次参加这么大型还有奖金的比赛，有点感想哈。作为一名应用数学专业（学的贼烂T﹏T）的3年级直博生（马上4年级了，老了），最近陷入了学术的针扎中，心中的滋味也就自己能体会。偶然间，不知是从哪里，发现了这个比赛，看着标题和奖金感觉挺有吸引力的。仔细想了想，要不去玩一玩，算是排解下压力，转移下注意力吧。这次比赛，当然要感谢队友华师大NLP**周杰**（一个热爱在[知乎](https://www.zhihu.com/people/zhou-jie-77-75/activities)回答问题和[github](https://github.com/12190143)上开源的的少年），以及开源[baseline_1](https://github.com/czczup/UrbanRegionFunctionClassification), [baseline_2](https://github.com/ABadCandy/BaiDuBigData19-URFC)的大佬们，以及赛事主办方联合国教科文组织国际工程科技知识中心（IKCEST）、中国工程科技知识中心（CKCEST）、百度公司及西安交通大学的大力支持。最后也祝贺各个进决赛的队伍，希望能从你们那学到点东西。
 
-周杰：没啥想说的，拿奖拿到无感
+周杰：楼上大佬有些谦虚，是我本科校友，一直特别认真，这次比赛也是废寝忘食。本人小白有幸参与。也算是一直做学术觉得乏味来参与比赛，提高实践能力同时提高对数据对敏锐度。坚信对于任何比赛，付出时间就不会太差，其他事情也是一样，共勉。
 
 ### Contacts
 - qxzhu16@fudan.edu.cn, QZHU6@mgh.harvard.edu
