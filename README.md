@@ -40,7 +40,7 @@
 - 机器学习模型
    - 1）Lightgbm模型和Xgboost模型，除了学习率和迭代次数，其他使用默认参数，结合前面抽取特征 （线下0.905048）
 - stacking
-   - 使用Lightgbm进行Stacking （线上90.02）
+   - 使用Lightgbm进行Stacking （线上90.20）
    
 ### 代码使用说明
 - [Feature_process](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_process) 特征抽取
