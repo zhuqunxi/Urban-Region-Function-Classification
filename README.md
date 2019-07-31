@@ -16,6 +16,8 @@
 - Pytorch 0.4.0
 - sklearn
 - numpy
+- XGboost
+- Lightgbm
 
 ### 思路
 #### 特征
@@ -25,11 +27,11 @@
 
 - 用户id特征挖掘
 
-  - 1）统计一个用户出现在不同的地方次数，这里以一天表示1次，然后特征中对8个统计量进行统计（注意：样本统计中需要将去当前样本的信息，从而防止透露label信息而过拟合）
-  
+  - 1）统计一个用户出现在不同的地方次数，这里以一天表示1次，然后特征中对8个统计量进行统计（注意：样本统计中需要将去当前样本的信息，从而防止透露label信息而过拟合）（主要特征，直接到线上86+）
   - 2）统计一个用户全局的Global特征，及一个用户在不同地方次数的统计信息
+  - 3）用户有规律出入到特征统计，如统计用户节假日情况，将一天分成四个时间段统计用户在这些时间段特征。
 
-- 初赛和复赛数据合并，从40w增加到44w样本
+- 初赛和复赛数据合并，从40w增加到44w样本（复赛大概提高1个点）
 
 #### 模型
 - 深度学习模型
@@ -39,9 +41,14 @@
    - 1）Lightgbm模型和Xgboost模型，除了学习率和迭代次数，其他使用默认参数，结合前面抽取特征 （线下0.905048）
 - stacking
    - 使用Lightgbm进行Stacking （线上90.02）
+   
+### 代码使用说明
+- [Feature_process](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_process) 特征抽取
+- [NN](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 神经网络模型
+- [ML](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML) 模型
+- [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
 
 ### Contacts
 - qxzhu16@fudan.edu.cn
 - jzhou@ica.stc.sh.cn
-
 
