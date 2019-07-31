@@ -48,7 +48,7 @@
 - [preprocessing](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/data_processing) 数据预处理
 	- 1）train.txt, test.txt, train.csv, test.csv生成
 	- 2）样本npy文件生成，用于深度学习模型
-- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取
+- [Feature_extracting](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/Feature_extracting) 特征抽取 （详细说明，见[blog](https://www.cnblogs.com/skykill/p/11273640.html)）
 	- 1）[Basic_feature](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/Basic_feature) 基础特征
 	- 2）[UserID_feature_local](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_local) 用户id的local特征抽取
 	- 3）[UserID_feature_global](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/Feature_extracting/UserID_feature_global) 用户id的global特征抽取
@@ -59,6 +59,7 @@
 	- [LightGBM概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification/tree/master/ML) 5-fold，得到训练的概率特征，测试的概率特征（取平均）
 - [ML_stack_model](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) Stacking
 	- [LightGBM跑概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) 5-fold
+
 
 ### 感想
 朱群喜：第一次参加这么大型还有奖金的比赛，有点感想哈。作为一名应用数学专业（学的贼烂T﹏T）的3年级直博生（马上4年级了，老了），最近陷入了学术的针扎中，心中的滋味也就自己能体会。偶然间，不知是从哪里，发现了这个比赛，看着标题和奖金感觉挺有吸引力的。仔细想了想，要不去玩一玩，算是排解下压力，转移下注意力吧。这次比赛，当然要感谢队友华师大NLP**周杰**（一个热爱在[知乎](https://www.zhihu.com/people/zhou-jie-77-75/activities)回答问题和[github](https://github.com/12190143)上开源的的少年），以及开源[baseline_1](https://github.com/czczup/UrbanRegionFunctionClassification), [baseline_2](https://github.com/ABadCandy/BaiDuBigData19-URFC)的大佬们，以及赛事主办方联合国教科文组织国际工程科技知识中心（IKCEST）、中国工程科技知识中心（CKCEST）、百度公司及西安交通大学的大力支持。最后也祝贺各个进决赛的队伍，希望能从你们那学到点东西。
