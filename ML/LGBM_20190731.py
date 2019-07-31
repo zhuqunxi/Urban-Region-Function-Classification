@@ -26,8 +26,6 @@ def ceshi(classifiers, X, y, X_T):
     log_cols = ["Classifier", "Accuracy"]
     log = pd.DataFrame(columns=log_cols)
 
-    # sss = StratifiedShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
-    # sss = KFold(n_splits=5, shuffle=True, random_state=0)
     sss = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
     acc_dict = {}
 
@@ -37,10 +35,12 @@ def ceshi(classifiers, X, y, X_T):
     XG_LGBM_prob_Test = {}
     prob_val = np.zeros((len(y), 9)) + 0.0
     tmp = np.zeros((len(y),))
+
+    show_Val = [1, 2, 3, 4, 5]
     for train_index, test_index in sss.split(X, y):
         cnt_val += 1
-        # if cnt_val <= 2:
-        #     continue
+        if cnt_val not in show_Val:
+            continue
         print('validation %d' % cnt_val)
         print('valiadation len:', len(test_index))
         tmp[test_index] = 1
@@ -71,6 +71,10 @@ def ceshi(classifiers, X, y, X_T):
             acc = accuracy_score(y_test, test_pred)
             Res_prob = clf.predict(X_T, best_iteration)
             Res_prob = softmax(Res_prob, axis=1)
+
+            np.save('./feature/prob_val_LGBM_cnt_val_%d.npy' % cnt_val, test_pred_prob)
+            np.save('./feature/prob_test_LGBM_cnt_val_%d.npy' % cnt_val, Res_prob)
+
             if name in acc_dict:
                 acc_dict[name] += acc
                 XG_LGBM_prob_Test[name] += Res_prob
@@ -104,38 +108,36 @@ def get_train_test_data(files_list, n_dim):
     print(' #')
     return X
 
-learning_rate = 0.08
+learning_rate = 0.06
 n_train = 440000
 y_name = 'y_train_44w.npy'
 train_files_list = ['train_basic_13_RF_1581.npy',
                     'train_X_UserID_normal_local_day.npy',
                     'train_X_UserID_normal_local_hour.npy',
+                    'train_X_UserID_normal_local_hour_std.npy',
                     'train_X_UserID_normal_local_work_rest_fangjia_day.npy',
                     'train_X_UserID_normal_local_work_rest_fangjia_hour.npy',
+                    'train_X_UserID_normal_local_work_rest_fangjia_hour_std.npy',
                     'train_X_UserID_normal_global_feature.npy',
-                    'train_X_UserID_normal_global_feature_more.npy'] + ['train_feature_user_hour_visit_44w.npy',
-                                                                        'train_feature_user_holiday_visit_44w.npy',
-                                                                        'train_feature_user_holiday_user_44w.npy']
+                    'train_X_UserID_normal_global_feature_more.npy',
+                    'train_X_UserID_normal_global_feature_more_more.npy'] + ['train_feature_user_hour_visit_44w.npy',
+                                                                             'train_feature_user_hour_user_44w.npy',
+                                                                             'train_feature_user_holiday_visit_44w.npy',
+                                                                             'train_feature_user_holiday_user_44w.npy']
 test_files_list = ['test_basic_13_RF_1581.npy',
                    'test_X_UserID_normal_local_day.npy',
                    'test_X_UserID_normal_local_hour.npy',
+                   'test_X_UserID_normal_local_hour_std.npy',
                    'test_X_UserID_normal_local_work_rest_fangjia_day.npy',
                    'test_X_UserID_normal_local_work_rest_fangjia_hour.npy',
+                   'test_X_UserID_normal_local_work_rest_fangjia_hour_std.npy',
                    'test_X_UserID_normal_global_feature.npy',
-                   'test_X_UserID_normal_global_feature_more.npy'] + ['test_feature_user_hour_visit_44w.npy',
-                                                                      'test_feature_user_holiday_visit_44w.npy',
-                                                                      'test_feature_user_holiday_user_44w.npy']
+                   'test_X_UserID_normal_global_feature_more.npy',
+                   'test_X_UserID_normal_global_feature_more_more.npy'] + ['test_feature_user_hour_visit_44w.npy',
+                                                                           'test_feature_user_hour_user_44w.npy',
+                                                                           'test_feature_user_holiday_visit_44w.npy',
+                                                                           'test_feature_user_holiday_user_44w.npy']
 
-# train_files_list = ['train_feature_statistic_visit.npy', 'train_feature_statistic_user.npy',
-#                     'train_X_UserID_normal_local_day.npy', 'train_basic_13_RF_1577.npy',
-#                     'train_X_UserID_normal_local_work_rest_fangjia_day.npy',
-#                     'train_X_UserID_normal_local_work_rest_fangjia_hour.npy']
-# test_files_list = ['test_feature_statistic_visit.npy', 'train_feature_statistic_user.npy',
-#                    'test_X_UserID_normal_local_day.npy', 'test_basic_13_RF_1577.npy',
-#                    'test_X_UserID_normal_local_work_rest_fangjia_day.npy',
-#                    'test_X_UserID_normal_local_work_rest_fangjia_hour.npy']
-
-# test_files_list = ['test_feature_statistic_visit.npy']
 
 print('learning_rate =', learning_rate)
 print('train_files_list:', train_files_list)
@@ -148,18 +150,6 @@ y = np.load(data_file_path + y_name)[:n_train] - 1
 
 #############################################################################################
 classifiers = [
-    #     KNeighborsClassifier(3),
-    #     SVC(probability=True),
-    #     DecisionTreeClassifier(),
-    #     RandomForestClassifier(),
-    #     AdaBoostClassifier(),
-    #     GradientBoostingClassifier(random_state=42,),
-    #     GaussianNB(),
-    #     LinearDiscriminantAnalysis(),
-    #     QuadraticDiscriminantAnalysis(),
-    #     LogisticRegression(),
-    # xgb.XGBClassifier(random_state=36, nthread=-1, n_estimators=1000, learning_rate=0.1, max_depth=8),
-    # lgbm.LGBMClassifier(random_state=36, n_jobs=-1, n_estimators=300, num_leaves=50, max_depth=5, learning_rate=0.1),
     # xgb.XGBClassifier(random_state=42, nthread=-1, n_estimators=1000),
     lgbm.LGBMClassifier(random_state=42, n_jobs=32, n_estimators=1000, learning_rate=learning_rate)
 ]
@@ -176,9 +166,9 @@ print('X_T = (N_sample, N_feature) =', X_T.shape)
 
 LGBM_LABEL_pro, val_pro = ceshi(classifiers, X, y, X_T)
 
-np.save('./submit/Label_LGBM_JG_{}.npy'.format(out_put_mask), np.argmax(LGBM_LABEL_pro, axis=-1) + 1)
-np.save('./submit/pro_LGBM_JG_test_{}.npy'.format(out_put_mask), LGBM_LABEL_pro)
-np.save('./submit/pro_LGBM_JG_val_{}.npy'.format(out_put_mask), val_pro)
+np.save('./submit/Label_LGBM_{}.npy'.format(out_put_mask), np.argmax(LGBM_LABEL_pro, axis=-1) + 1)
+np.save('./submit/pro_LGBM_test_{}.npy'.format(out_put_mask), LGBM_LABEL_pro)
+np.save('./submit/pro_LGBM_val_{}.npy'.format(out_put_mask), val_pro)
 print('learning_rate =', learning_rate)
 print('train_files_list:', train_files_list)
 print('test_files_list:', test_files_list)
@@ -186,35 +176,7 @@ print('X = (N_sample, N_feature) =', X.shape)
 print('X_T = (N_sample, N_feature) =', X_T.shape)
 
 from submission import generate
-generate('./submit/Label_LGBM_JG_{}.npy'.format(out_put_mask), './submit/submit_LGBM_JG_{}.txt'.format(out_put_mask))
+generate('./submit/Label_LGBM_{}.npy'.format(out_put_mask), './submit/submit_LGBM_{}.txt'.format(out_put_mask))
 # generate('./submit/Label_XG_{}.npy'.format(out_put_mask), './submit/Label_XG_{}.txt'.format(out_put_mask))
 print('done!')
 
-'''
-result: 40w
-train_files_list = ['train_feature_statistic_visit.npy', 'train_feature_statistic_user.npy',
-                    'train_X_UserID_normal_local_day.npy', 'train_basic_13_RF_1577.npy',
-                    'train_X_UserID_normal_local_work_rest_fangjia_day.npy',
-                    'train_X_UserID_normal_local_work_rest_fangjia_hour.npy',
-                    'train_X_UserID_normal_local_hour.npy']
-test_files_list = ['test_feature_statistic_visit.npy', 'train_feature_statistic_user.npy',
-                   'test_X_UserID_normal_local_day.npy', 'test_basic_13_RF_1577.npy',
-                   'test_X_UserID_normal_local_work_rest_fangjia_day.npy',
-                   'test_X_UserID_normal_local_work_rest_fangjia_hour.npy',
-                   'test_X_UserID_normal_local_hour.npy']
-(400000, 55)	(400000, 55)	(400000, 144)	(400000, 1577)	(400000, 504)	(400000, 504)	(400000, 360)	 #
-(100000, 55)	(100000, 55)	(100000, 144)	(100000, 1577)	(100000, 504)	(100000, 504)	(100000, 360)	 #
-X = (N_sample, N_feature) = (400000, 3199)
-X_T = (N_sample, N_feature) = (100000, 3199)
-LGBMClassifier  5-fold avg acc : 0.8797075143776922
-************************************************************************************************************************
-result: 44w
-train_files_list: ['train_basic_13_RF_1581.npy', 'train_X_UserID_normal_local_day.npy', 'train_X_UserID_normal_local_work_rest_fangjia_day.npy']
-test_files_list: ['test_basic_13_RF_1581.npy', 'test_X_UserID_normal_local_day.npy', 'test_X_UserID_normal_local_work_rest_fangjia_day.npy']
-(440000, 1581)	(440000, 144)	(440000, 504)	 #
-(100000, 1581)	(100000, 144)	(100000, 504)	 #
-X = (N_sample, N_feature) = (440000, 2229)
-X_T = (N_sample, N_feature) = (100000, 2229)
-LGBMClassifier  5-fold avg acc : 0.8841500372267557
-
-'''
