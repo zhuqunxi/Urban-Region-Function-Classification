@@ -61,7 +61,7 @@
 	- [LightGBM跑概率特征](https://github.com/zhuqunxi/Urban-Region-Function-Classification-/tree/master/ML_stack_model) 5-fold
 
 ### 感想
-朱群喜：作为一名应用数学专业（学的贼烂T﹏T）的3年级直博生（马上4年级了，老了），最近陷入了学术的针扎中，心中的滋味也就自己能体会。偶然间，不知是从哪里，发现了这个比赛，看着标题和奖金感觉挺有吸引力的。仔细想了想，要不去玩一玩，算是排解下压力，转移下注意力吧。话说回来，这应该算是我第一次参加这么大型还有奖金的比赛，真正的小白。整个比赛中，当然要感谢队友华师大NLP周杰（一个热爱在[知乎](https://www.zhihu.com/people/zhou-jie-77-75/activities)回答问题和[github](https://github.com/12190143)上开源的的少年），以及开源[baseline_1](https://github.com/czczup/UrbanRegionFunctionClassification), [baseline_2](https://github.com/ABadCandy/BaiDuBigData19-URFC)的大佬们，以及赛事主办方联合国教科文组织国际工程科技知识中心（IKCEST）、中国工程科技知识中心（CKCEST）、百度公司及西安交通大学的大力支持。最后也祝贺各个进决赛的队伍，希望能从你们那学到点东西。
+朱群喜：第一次参加这么大型还有奖金的比赛，有点感想哈。作为一名应用数学专业（学的贼烂T﹏T）的3年级直博生（马上4年级了，老了），最近陷入了学术的针扎中，心中的滋味也就自己能体会。偶然间，不知是从哪里，发现了这个比赛，看着标题和奖金感觉挺有吸引力的。仔细想了想，要不去玩一玩，算是排解下压力，转移下注意力吧。这次比赛，当然要感谢队友华师大NLP*周杰*（一个热爱在[知乎](https://www.zhihu.com/people/zhou-jie-77-75/activities)回答问题和[github](https://github.com/12190143)上开源的的少年），以及开源[baseline_1](https://github.com/czczup/UrbanRegionFunctionClassification), [baseline_2](https://github.com/ABadCandy/BaiDuBigData19-URFC)的大佬们，以及赛事主办方联合国教科文组织国际工程科技知识中心（IKCEST）、中国工程科技知识中心（CKCEST）、百度公司及西安交通大学的大力支持。最后也祝贺各个进决赛的队伍，希望能从你们那学到点东西。
 
 周杰：没啥想说的，拿奖拿到无感
 
